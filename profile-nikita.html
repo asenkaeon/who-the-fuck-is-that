@@ -221,6 +221,180 @@
 
             </section>
 
+            <!-- НАРОДНЫЙ РЕЙТИНГ -->
+
+<section class="public-rating" data-profile-key="nikita">
+
+    <div class="public-rating-heading">
+
+        <h2>НАРОДНЫЙ РЕЙТИНГ</h2>
+
+    </div>
+
+
+    <p class="public-rating-description">
+        Оценка кадра коллективным разумом
+        аналитического отдела.
+    </p>
+
+
+    <div class="public-rating-results">
+
+        <div class="rating-parameter">
+
+            <div class="rating-parameter-top">
+
+                <span>ВНЕШНОСТЬ</span>
+                <strong id="appearanceAverage">—</strong>
+
+            </div>
+
+            <div class="rating-bar">
+                <div
+                    class="rating-bar-fill"
+                    id="appearanceBar"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <div class="rating-parameter">
+
+            <div class="rating-parameter-top">
+
+                <span>АДЕКВАТНОСТЬ</span>
+                <strong id="adequacyAverage">—</strong>
+
+            </div>
+
+            <div class="rating-bar">
+                <div
+                    class="rating-bar-fill"
+                    id="adequacyBar"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <div class="rating-parameter">
+
+            <div class="rating-parameter-top">
+
+                <span>ПОТЕНЦИАЛ</span>
+                <strong id="potentialAverage">—</strong>
+
+            </div>
+
+            <div class="rating-bar">
+                <div
+                    class="rating-bar-fill"
+                    id="potentialBar"
+                ></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="public-rating-total">
+
+        <span>СРЕДНЯЯ ОЦЕНКА</span>
+
+        <strong>
+            <span id="totalAverage">—</span>
+            <small>/ 5</small>
+        </strong>
+
+        <p id="votesCount">0 оценок</p>
+
+    </div>
+
+
+    <button
+        type="button"
+        class="rating-vote-button"
+        id="ratingVoteButton"
+    >
+        ОЦЕНИТЬ КАДРА
+    </button>
+
+
+    <form
+        class="rating-form"
+        id="ratingForm"
+    >
+
+        <div class="rating-question">
+
+            <span>ВНЕШНОСТЬ</span>
+
+            <div class="rating-options">
+
+                <label><input type="radio" name="appearance" value="1"><span>1</span></label>
+                <label><input type="radio" name="appearance" value="2"><span>2</span></label>
+                <label><input type="radio" name="appearance" value="3"><span>3</span></label>
+                <label><input type="radio" name="appearance" value="4"><span>4</span></label>
+                <label><input type="radio" name="appearance" value="5"><span>5</span></label>
+
+            </div>
+
+        </div>
+
+
+        <div class="rating-question">
+
+            <span>АДЕКВАТНОСТЬ</span>
+
+            <div class="rating-options">
+
+                <label><input type="radio" name="adequacy" value="1"><span>1</span></label>
+                <label><input type="radio" name="adequacy" value="2"><span>2</span></label>
+                <label><input type="radio" name="adequacy" value="3"><span>3</span></label>
+                <label><input type="radio" name="adequacy" value="4"><span>4</span></label>
+                <label><input type="radio" name="adequacy" value="5"><span>5</span></label>
+
+            </div>
+
+        </div>
+
+
+        <div class="rating-question">
+
+            <span>ПОТЕНЦИАЛ</span>
+
+            <div class="rating-options">
+
+                <label><input type="radio" name="potential" value="1"><span>1</span></label>
+                <label><input type="radio" name="potential" value="2"><span>2</span></label>
+                <label><input type="radio" name="potential" value="3"><span>3</span></label>
+                <label><input type="radio" name="potential" value="4"><span>4</span></label>
+                <label><input type="radio" name="potential" value="5"><span>5</span></label>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="rating-submit"
+        >
+            ОТПРАВИТЬ ОЦЕНКУ
+        </button>
+
+    </form>
+
+
+    <div
+        class="rating-message"
+        id="ratingMessage"
+    ></div>
+
+</section>
+
             <a href="idiots.html" class="back-to-list">
                 ← ВЕРНУТЬСЯ К ДЕБИЛАМ
             </a>
@@ -231,7 +405,10 @@
 
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script src="profile.js"></script>
+<script src="profile-rating.js"></script>
 
 </body>
 </html>
