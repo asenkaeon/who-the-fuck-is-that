@@ -570,3 +570,247 @@
         font-size: 21px;
     }
 }
+
+/* =========================
+   PUBLIC RATING
+========================= */
+
+.public-rating {
+    margin: 34px 20px 0;
+    padding: 22px 18px 20px;
+    border: 1px solid rgba(10, 10, 10, 0.15);
+    border-radius: 22px;
+    background: #ffffff;
+}
+
+.public-rating-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.public-rating-heading span {
+    color: #4E0001;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.public-rating-heading h2 {
+    margin: 0;
+    color: #4E0001;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.public-rating-description {
+    margin: 9px 0 22px;
+    color: #77716f;
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+
+/* =========================
+   PARAMETERS
+========================= */
+
+.public-rating-results {
+    border-top: 1px solid rgba(10, 10, 10, 0.15);
+}
+
+.rating-parameter {
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+}
+
+.rating-parameter-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.rating-parameter-top span {
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.rating-parameter-top strong {
+    color: #4E0001;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.rating-bar {
+    width: 100%;
+    height: 4px;
+    margin-top: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(78, 0, 1, 0.10);
+}
+
+.rating-bar-fill {
+    width: 0;
+    height: 100%;
+    border-radius: 999px;
+    background: #4E0001;
+    transition: width 0.4s ease;
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.public-rating-total {
+    margin-top: 18px;
+}
+
+.public-rating-total > span {
+    display: block;
+    color: #77716f;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.public-rating-total strong {
+    display: block;
+    margin-top: 4px;
+    color: #4E0001;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.public-rating-total strong small {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.public-rating-total p {
+    margin: 5px 0 0;
+    color: #77716f;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.rating-vote-button,
+.rating-submit {
+    width: 100%;
+    height: 44px;
+    margin-top: 20px;
+    border: 1px solid #4E0001;
+    border-radius: 22px;
+    background: #4E0001;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.rating-vote-button:active,
+.rating-submit:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.rating-form {
+    display: none;
+    margin-top: 22px;
+}
+
+.rating-form.visible {
+    display: block;
+}
+
+.rating-question {
+    margin-top: 18px;
+}
+
+.rating-question:first-child {
+    margin-top: 0;
+}
+
+.rating-question > span {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.rating-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+}
+
+.rating-options label {
+    position: relative;
+    display: block;
+}
+
+.rating-options input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rating-options label > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    border: 1px solid rgba(78, 0, 1, 0.35);
+    border-radius: 10px;
+    color: #4E0001;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.rating-options input:checked + span {
+    background: #4E0001;
+    color: #ffffff;
+}
+
+.rating-submit {
+    margin-top: 24px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.rating-message {
+    display: none;
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(78, 0, 1, 0.06);
+    color: #4E0001;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.rating-message.visible {
+    display: block;
+}
