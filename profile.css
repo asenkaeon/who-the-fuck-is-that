@@ -1,0 +1,572 @@
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-page {
+    min-height: 100vh;
+    background: #ffffff;
+    color: #0a0a0a;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.profile-header {
+    height: 72px;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+    border-bottom: 1px solid #4E0001;
+
+    position: relative;
+    z-index: 20;
+}
+
+.profile-back {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #0a0a0a;
+    text-decoration: none;
+
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.profile-header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.profile-gallery {
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #4E0001;
+}
+
+.gallery-track {
+    display: flex;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.gallery-track::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-slide {
+    flex: 0 0 100%;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    scroll-snap-align: start;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   GALLERY DOTS
+========================= */
+
+.gallery-dots {
+    position: absolute;
+
+    bottom: 14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 6px;
+
+    pointer-events: none;
+}
+
+.gallery-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.gallery-dot.active {
+    background: #ffffff;
+}
+
+
+/* =========================
+   MAIN INFO
+========================= */
+
+.profile-main-info {
+    padding: 22px 20px 24px;
+
+    background: #ffffff;
+
+    position: relative;
+    z-index: 5;
+}
+
+.profile-name-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.profile-name-row h1 {
+    margin: 0;
+
+    font-size: 23px;
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+}
+
+.profile-tag {
+    margin: 7px 0 0;
+
+    color: #4E0001;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.profile-tag span {
+    margin: 0 4px;
+}
+
+.profile-rating {
+    flex-shrink: 0;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.profile-rating span {
+    color: #4E0001;
+}
+
+.profile-status {
+    display: inline-block;
+
+    margin-top: 17px;
+    padding: 8px 11px;
+
+    border-radius: 20px;
+
+    background: #4E0001;
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+/* =========================
+   BASIC INFO
+========================= */
+
+.profile-basic-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 22px;
+
+    border-top: 1px solid rgba(10, 10, 10, 0.15);
+    border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+}
+
+.profile-basic-info div {
+    padding: 13px 8px 13px 0;
+
+    font-size: 12px;
+    line-height: 1.15;
+}
+
+.profile-basic-info div + div {
+    padding-left: 8px;
+
+    border-left: 1px solid rgba(10, 10, 10, 0.15);
+}
+
+.profile-basic-info span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #77716f;
+
+    font-size: 8px;
+    font-weight: 800;
+}
+
+/* =========================
+   BOTTOM SHEET
+========================= */
+
+.profile-sheet {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 72vh;
+
+    background: #ffffff;
+
+    border-radius: 24px 24px 0 0;
+
+    box-shadow:
+        0 -8px 30px rgba(0, 0, 0, 0.10);
+
+    z-index: 15;
+
+    transform: translateY(calc(100% - 86px));
+
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+    touch-action: none;
+}
+
+
+/* раскрыто */
+
+.profile-sheet.open {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SHEET HANDLE
+========================= */
+
+.sheet-handle-area {
+    height: 86px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 12px;
+
+    cursor: grab;
+
+    touch-action: none;
+}
+
+.sheet-handle-area:active {
+    cursor: grabbing;
+}
+
+.sheet-handle {
+    width: 40px;
+    min-width: 40px;
+    height: 4px;
+    min-height: 4px;
+    border-radius: 999px;
+    background: #4E0001;
+    flex-shrink: 0;
+    display: block;
+}
+
+.sheet-hint {
+    margin-top: 12px;
+
+    color: #77716f;
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   SHEET CONTENT
+========================= */
+
+.sheet-content {
+    height: calc(100% - 86px);
+
+    overflow-y: auto;
+
+    padding-bottom: 40px;
+
+    overscroll-behavior: contain;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.profile-section {
+    padding: 28px 20px 0;
+}
+
+.profile-section h2 {
+    margin: 0 0 12px;
+
+    color: #4E0001;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+
+.profile-section > p {
+    margin: 0;
+
+    max-width: 350px;
+
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+
+/* =========================
+   FACTS
+========================= */
+
+.facts-list {
+    border-top: 1px solid rgba(10, 10, 10, 0.15);
+}
+
+.fact {
+    display: flex;
+    align-items: baseline;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+
+    font-size: 13px;
+    line-height: 1.25;
+}
+
+.fact span {
+    width: 30px;
+
+    flex-shrink: 0;
+
+    color: #4E0001;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   PERIOD
+========================= */
+
+.period {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.period span:nth-child(2) {
+    color: #4E0001;
+}
+
+
+/* =========================
+   PROS / CONS
+========================= */
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+}
+
+.pros,
+.cons {
+    min-width: 0;
+}
+
+.pros h3,
+.cons h3 {
+    margin: 0 0 8px;
+
+    font-size: 24px;
+    line-height: 1;
+}
+
+.pros h3 {
+    color: #4E0001;
+}
+
+.cons h3 {
+    color: #77716f;
+}
+
+.pros ul,
+.cons ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.pros li,
+.cons li {
+    margin-bottom: 9px;
+
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.profile-result {
+    margin: 32px 20px 0;
+
+    padding: 20px;
+
+    background: #4E0001;
+    color: #ffffff;
+
+    border-radius: 22px;
+}
+
+.result-block + .result-block {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.result-label {
+    display: block;
+
+    max-width: 190px;
+
+    font-size: 9px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.result-score {
+    margin-top: 5px;
+
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.result-score small {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-to-list {
+    display: block;
+
+    margin: 22px 20px 0;
+    padding: 15px;
+
+    border: 1px solid #4E0001;
+    border-radius: 30px;
+
+    color: #4E0001;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   SMALL SCREENS
+========================= */
+
+@media (max-width: 380px) {
+
+    .profile-main-info,
+    .profile-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .profile-result {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .back-to-list {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .profile-name-row h1 {
+        font-size: 21px;
+    }
+}

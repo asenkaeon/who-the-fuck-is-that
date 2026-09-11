@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ДЕБИЛЫ — WHO THE FUCK IS THAT?</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="idiots.css">
+</head>
+
+<body>
+
+    <main class="idiots-page">
+
+        <!-- Шапка -->
+        <header class="idiots-header">
+
+            <a href="index.html" class="back-button" aria-label="Назад">
+                ←
+            </a>
+
+            <h1>ДЕБИЛЫ</h1>
+
+            <div class="header-spacer"></div>
+
+        </header>
+
+
+        <!-- Основная часть -->
+        <section class="idiots-content">
+
+            <div class="idiots-intro">
+                <p class="idiots-count">КАДРОВ: 12</p>
+                <p class="idiots-description">
+                    Все основные кадры, замеченные
+                    в личной жизни Аси
+                </p>
+            </div>
+
+
+            <!-- Поиск -->
+            <div class="search-box">
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Поиск"
+                    autocomplete="off"
+                >
+            </div>
+
+
+            <!-- Сортировка -->
+            <div class="sorting-row">
+
+                <button class="sorting-button" id="sortButton">
+                    Сортировка:
+                    <span>По умолчанию</span>
+                </button>
+
+            </div>
+
+
+            <!-- Меню сортировки -->
+            <div class="sort-menu" id="sortMenu">
+
+                <button data-sort="default">
+                    По умолчанию
+                </button>
+
+                <button data-sort="new">
+                    Сначала новые
+                </button>
+
+                <button data-sort="old">
+                    Сначала старые
+                </button>
+
+                <button data-sort="rating">
+                    По рейтингу
+                </button>
+
+                <button data-sort="significance">
+                    По значимости
+                </button>
+
+            </div>
+
+
+            <!-- Список -->
+            <div class="idiots-list" id="idiotsList">
+
+                <!-- Вячеслав -->
+                 <a href="profile-vyacheslav.html" class="idiot-item"
+ data-name="Вячеслав Романов" data-date="2026-09-10"
+ data-rating="2.5" data-significance="0.6">
+    <div class="idiot-photo">
+        <img src="images/vya.jpg" alt="Вячеслав Романов">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">ВЯЧЕСЛАВ РОМАНОВ</div>
+        <div class="idiot-tag">Тренер DDX</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 2.5
+    </div>
+</a>
+                
+                <!-- Глеб -->
+                 <a href="profile-gleb.html" class="idiot-item"
+ data-name="Глеб Гудков" data-date="2026-07-09"
+ data-rating="2.0" data-significance="0.6">
+    <div class="idiot-photo">
+        <img src="images/gleb.jpg" alt="Глеб Гудков">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">ГЛЕБ ГУДКОВ</div>
+        <div class="idiot-tag">ГУУшник</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 2.0
+    </div>
+</a>
+                
+                <!-- Денис -->
+                 <a href="profile-denis-selivanov.html" class="idiot-item"
+ data-name="Денис Селиванов" data-date="2026-03-01"
+ data-rating="4.1" data-significance="3.6">
+    <div class="idiot-photo">
+        <img src="images/den.jpg" alt="Денис Селиванов">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">ДЕНИС СЕЛИВАНОВ</div>
+        <div class="idiot-tag">Тренер DDX</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 4.1
+    </div>
+</a>
+                
+                <!-- Рома -->
+                 <a href="profile-roman.html" class="idiot-item"
+ data-name="Роман Беликов" data-date="2026-03-01"
+ data-rating="2.8" data-significance="1.9">
+    <div class="idiot-photo">
+        <img src="images/roma.jpg" alt="Роман Беликов">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">РОМАН БЕЛИКОВ</div>
+        <div class="idiot-tag">Тренер DDX</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 2.8
+    </div>
+</a>
+                
+                <!-- Никита -->
+                 <a href="profile-nikita.html" class="idiot-item"
+ data-name="Никита Горынкин" data-date="2025-08-28"
+ data-rating="1.8" data-significance="4.5">
+    <div class="idiot-photo">
+        <img src="images/nik.jpg" alt="Никита Горынкин">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">НИКИТА ГОРЫНКИН</div>
+        <div class="idiot-tag">Репер</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 1.8
+    </div>
+</a>
+                
+                <!-- Андрей -->
+                 <a href="profile-andrey.html" class="idiot-item"
+ data-name="Андрей Федоров" data-date="2025-04-26"
+ data-rating="1.4" data-significance="1.2">
+    <div class="idiot-photo">
+        <img src="images/no.jpg" alt="Андрей Федоров">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">АНДРЕЙ ФЕДОРОВ</div>
+        <div class="idiot-tag">Внук Сергеича</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 1.4
+    </div>
+</a>
+                
+                <!-- Олег -->
+                 <a href="profile-oleg.html" class="idiot-item"
+ data-name="Олег Мелин" data-date="2026-05-20"
+ data-rating="1.7" data-significance="1.3">
+    <div class="idiot-photo">
+        <img src="images/oleg.jpg" alt="Олег Мелин">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">ОЛЕГ МЕЛИН</div>
+        <div class="idiot-tag">Фотограф Алех</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 1.7
+    </div>
+</a>
+                
+                <!-- Ден -->
+                 <a href="profile-denis.html" class="idiot-item"
+ data-name="Денис Смирнов" data-date="2024-08-28"
+ data-rating="3.2" data-significance="2.6">
+    <div class="idiot-photo">
+        <img src="images/denis.jpg" alt="Денис Смирнов">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">ДЕНИС СМИРНОВ</div>
+        <div class="idiot-tag">Аниматор</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 3.2
+    </div>
+</a>
+                
+                <!-- Дима -->
+                <a href="profile-dima.html" class="idiot-item"
+ data-name="Дмитрий Шацкий" data-date="2024-05-30"
+ data-rating="1.8" data-significance="1.5">
+    <div class="idiot-photo">
+        <img src="images/dima.jpg" alt="Дмитрий Шацкий">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">ДМИТРИЙ ШАЦКИЙ</div>
+        <div class="idiot-tag">Мент</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 1.8
+    </div>
+</a>
+                
+                
+                <!-- Матвей -->
+                 <a href="profile-matvey.html" class="idiot-item"
+ data-name="Матвей Поляков" data-date="2023-05-18"
+ data-rating="3.0" data-significance="3.9">
+    <div class="idiot-photo">
+        <img src="images/mat.jpg" alt="Матвей Поляков">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">МАТВЕЙ ПОЛЯКОВ</div>
+        <div class="idiot-tag">Дединсайт</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 3.0
+    </div>
+</a>
+
+<!-- Леша -->
+ <a href="profile-lesha.html" class="idiot-item"
+ data-name="Алексей Алябьев" data-date="2026-05-01"
+ data-rating="1.5" data-significance="2.8">
+    <div class="idiot-photo">
+        <img src="images/lesha.jpg" alt="Алексей Алябьев">
+    </div>
+    <div class="idiot-info">
+        <div class="idiot-name">АЛЕКСЕЙ АЛЯБЬЕВ</div>
+        <div class="idiot-tag">Малолетка</div>
+    </div>
+    <div class="idiot-rating">
+        <span>★</span> 1.5
+    </div>
+</a>
+
+                <!-- Иван -->
+                <a
+                    href="profile-ivan.html"
+                    class="idiot-item"
+                    data-name="Иван Привалов"
+                    data-date="2026-05-10"
+                    data-rating="4.5"
+                    data-significance="3.4"
+                >
+
+                    <div class="idiot-photo">
+                        <img
+                            src="images/ivan.jpg"
+                            alt="Иван Привалов"
+                        >
+                    </div>
+
+                    <div class="idiot-info">
+
+                        <div class="idiot-name">
+                            ИВАН ПРИВАЛОВ
+                        </div>
+
+                        <div class="idiot-tag">
+                            Разраб
+                        </div>
+
+                    </div>
+
+                    <div class="idiot-rating">
+                        <span>★</span>
+                        4.5
+                    </div>
+
+                </a>
+            </div>
+<div class="idiots-end">
+    <p>Пока что все. Следите за обновлениями!</p>
+    <p>"Это все для контенту!" (с) Ваша Асенька</p>
+</div>
+        </section>
+
+    </main>
+
+
+    <script src="idiots.js"></script>
+
+</body>
+</html>

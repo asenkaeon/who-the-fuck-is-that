@@ -1,0 +1,185 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #630102;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+
+    background: #630102;
+}
+
+
+/* =========================
+   BACKGROUND ASENKA
+========================= */
+
+.background-name {
+    position: absolute;
+
+    z-index: 0;
+
+    top: 38%;
+    left: 95%;
+
+    transform: translate(-50%, -50%) rotate(90deg);
+
+    font-size: 44vw;
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -0.08em;
+
+    white-space: nowrap;
+
+    color: #4E0001;
+    opacity: 0.44;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    padding: 48px 24px 0;
+}
+
+h1 {
+    max-width: 330px;
+
+    font-size: 22px;
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.hero-text {
+    max-width: 350px;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+    line-height: 1.25;
+}
+
+.hero-text p + p {
+    margin-top: 17px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.open-button {
+    margin-top: 17px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 30px;
+    background: #4E0001;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+    animation: button-pulse 2.8s ease-in-out infinite;
+}
+
+.open-button:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: #3A0001;
+    box-shadow: 0 8px 18px rgba(78, 0, 1, 0.25);
+    animation: none;
+}
+
+.open-button:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 0 3px 8px rgba(78, 0, 1, 0.2);
+}
+
+@keyframes button-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+    }
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.hero-photo {
+    position: absolute;
+
+    z-index: 2;
+
+    width: 115vw;
+    max-width: none;
+
+    left: 50%;
+    bottom: -5px;
+
+    transform: translateX(-50%);
+
+    display: block;
+}
+
+.open-button {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 17px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 30px;
+    background: #4E0001;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
