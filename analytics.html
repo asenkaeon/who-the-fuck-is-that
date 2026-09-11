@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Аналитический отдел</title>
+
+    <link rel="stylesheet" href="analytics.css">
+</head>
+
+<body>
+
+    <main class="analytics-page">
+
+        <header class="analytics-header">
+            <a href="idiots.html" class="analytics-back">←</a>
+
+            <div class="analytics-header-title">
+                АНАЛИТИЧЕСКИЙ ОТДЕЛ
+            </div>
+        </header>
+
+
+        <section class="analytics-intro">
+
+            <p class="analytics-kicker">
+                WHO THE FUCK IS THAT?
+            </p>
+
+            <h1>
+                АНАЛИТИКА<br>
+                КАДРОВ
+            </h1>
+
+            <p class="analytics-description">
+                Отдел проводит сравнительный анализ подозрительных
+                персонажей по имеющимся данным.
+            </p>
+
+        </section>
+
+
+        <!-- РАДАР -->
+
+<section class="analytics-section radar-section">
+
+    <div class="section-heading">
+        <span>01</span>
+        <h2>ПСИХОЛОГИЧЕСКИЙ ПРОФИЛЬ</h2>
+    </div>
+
+    <p class="section-description">
+        Оценка ключевых характеристик персонажа.
+    </p>
+
+    <div class="person-select-wrapper">
+
+        <label for="radarPerson">
+            ВЫБЕРИТЕ КАДРА
+        </label>
+
+        <select id="radarPerson">
+
+            <option value="ivan">
+                Иван Привалов
+            </option>
+
+            <option value="matvey">
+                Матвей Поляков
+            </option>
+
+            <option value="nikita">
+                Никита Горынкин
+            </option>
+
+            <option value="oleg">
+                Олег Мелин
+            </option>
+
+            <option value="dmitry">
+                Дмитрий Шацкий
+            </option>
+
+            <option value="alexey">
+                Алексей Алябьев
+            </option>
+
+            <option value="denis-selivanov">
+                Денис Селиванов
+            </option>
+
+            <option value="vyacheslav" disabled>
+                Вячеслав Романов — НЕТ ДАННЫХ
+            </option>
+
+            <option value="gleb" disabled>
+                Глеб Гудков — НЕТ ДАННЫХ
+            </option>
+
+            <option value="roman" disabled>
+                Роман Беликов — НЕТ ДАННЫХ
+            </option>
+
+            <option value="denis-smirnov" disabled>
+                Денис Смирнов — НЕТ ДАННЫХ
+            </option>
+
+            <option value="andrey" disabled>
+                Андрей Федоров — НЕТ ДАННЫХ
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="radar-card">
+
+        <div class="radar-chart-wrapper">
+            <canvas id="radarChart"></canvas>
+        </div>
+
+        <div class="radar-legend">
+
+            <div>
+                <span>5</span>
+                <p>МАКСИМУМ</p>
+            </div>
+
+            <div>
+                <span>0</span>
+                <p>МИНИМУМ</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- СРАВНИТЕЛЬНЫЙ АНАЛИЗ -->
+
+<section class="analytics-section comparison-section">
+
+    <div class="section-heading">
+        <span>02</span>
+        <h2>СРАВНИТЕЛЬНЫЙ АНАЛИЗ</h2>
+    </div>
+
+    <p class="section-description">
+        Сопоставление зарегистрированных кадров
+        по выбранному параметру.
+    </p>
+
+    <div class="comparison-select-wrapper">
+
+        <label for="comparisonParameter">
+            ПАРАМЕТР
+        </label>
+
+        <select id="comparisonParameter">
+
+            <option value="income">
+                ЗАРАБОТОК
+            </option>
+
+            <option value="attitude">
+                ОТНОШЕНИЕ КО МНЕ
+            </option>
+
+            <option value="sex">
+                СЕКС
+            </option>
+
+            <option value="charisma">
+                ХАРИЗМА
+            </option>
+
+            <option value="potential">
+                ПОТЕНЦИАЛ
+            </option>
+
+            <option value="idiot">
+                УРОВЕНЬ ДЕБИЛИЗМА
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="comparison-card">
+
+        <div class="comparison-chart-wrapper">
+            <canvas id="comparisonChart"></canvas>
+        </div>
+
+    </div>
+
+    <div class="comparison-note">
+
+        <span>*</span>
+
+        <p id="comparisonNote">
+            Отсутствие данных не означает нулевой показатель.
+        </p>
+
+    </div>
+
+</section>
+
+        <a href="idiots.html" class="analytics-back-button">
+            ← ВЕРНУТЬСЯ К КАДРАМ
+        </a>
+
+
+        <footer class="analytics-footer">
+            <p>Аналитический отдел работает на общественных началах.</p>
+            <p>"Это все для контенту! (с) Ваша Асенька"</p>
+        </footer>
+
+    </main>
+
+
+    <script src="analytics.js"></script>
+
+</body>
+</html>
